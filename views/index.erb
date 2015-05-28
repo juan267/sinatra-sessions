@@ -1,0 +1,16 @@
+<% if session[:user] %>
+  <h1>Excelente <%= session[:user] %> te has logeado en la aplicacion</h1>
+  <form  action="/sessions" method="post">
+    <input name="_method" type="hidden" value="delete" />
+    <input type="submit" value="Salir">
+  </form>
+<% else %>
+  <h1>Hola Maker!</h1>
+  <h3>Logueate en mediante el siguiente formulario</h3>
+
+  <form action="/sessions" method="post">
+    <label for="user">Usuario</label>
+    <input type="text" name="user">
+  </form>
+<% end %>
+<a href="/privado">Link privado para Usuarios Logueados</a>

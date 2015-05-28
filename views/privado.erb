@@ -1,0 +1,7 @@
+<% if session[:user] %>
+  <h1>Bienvenido <%= session[:user] %> a la zona Privada!</h1>
+<% else %>
+  <h1>Tienes que logearte primero para ver este contenido</h1>
+<% end %>
+
+<a href="/">Home</a>
